@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F291DEAB-6E39-46C3-A678-C6DB3C407B43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZIZHENG</RootNamespace>
+    <AssemblyName>ZIZHENG</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B1DF2C058784C48F52874C3429037B70F4BEDEEC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ZIZHENG_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>D:\Aspose.Total_for_.NET_DLL_2015-02-25\net2.0\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="License">
+      <HintPath>C:\Program Files (x86)\.NET Reactor\SDK\Binaries\License.dll</HintPath>
+    </Reference>
+    <Reference Include="LicenseGen">
+      <HintPath>C:\Program Files (x86)\.NET Reactor\SDK\Binaries\LicenseGen.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessHelper.cs" />
+    <Compile Include="Database\DataTableHelper.cs" />
+    <Compile Include="DTset.cs" />
+    <Compile Include="ExcelExport.cs" />
+    <Compile Include="ExpWord.cs" />
+    <Compile Include="JS.cs" />
+    <Compile Include="LOG\Log.cs" />
+    <Compile Include="LOG\LogType.cs" />
+    <Compile Include="LOG\Msg.cs" />
+    <Compile Include="LOG\MsgType.cs" />
+    <Compile Include="MessageUtil.cs" />
+    <Compile Include="MJS.cs" />
+    <Compile Include="BQJS.cs" />
+    <Compile Include="FileRead.cs" />
+    <Compile Include="Reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reg.Designer.cs">
+      <DependentUpon>Reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitingBox\frmWaitingBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitingBox\frmWaitingBox.Designer.cs">
+      <DependentUpon>frmWaitingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="YZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YZ.Designer.cs">
+      <DependentUpon>YZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeysSet.cs" />
+    <Compile Include="Computer.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrom.Designer.cs">
+      <DependentUpon>BaseFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RowMergeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RowMergeView.designer.cs">
+      <DependentUpon>RowMergeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZIZHENGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZIZHENGDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZTfont.cs" />
+    <EmbeddedResource Include="Reg.resx">
+      <DependentUpon>Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YZ.resx">
+      <DependentUpon>YZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrom.resx">
+      <DependentUpon>BaseFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RowMergeView.resx">
+      <DependentUpon>RowMergeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ZIZHENGDataSet.xsc">
+      <DependentUpon>ZIZHENGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZIZHENGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZIZHENGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZIZHENGDataSet.xss">
+      <DependentUpon>ZIZHENGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZIZHENG_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.jpg" />
+    <None Include="Resources\bfh.jpg" />
+    <None Include="Resources\d1.jpg" />
+    <None Include="Resources\gl.jpg" />
+    <None Include="Resources\h.jpg" />
+    <None Include="Resources\kgbod5kgmlssd.jpg" />
+    <None Include="Resources\kgbod5m3d.jpg" />
+    <None Include="Resources\kgcodm3d.jpg" />
+    <None Include="Resources\kgd.jpg" />
+    <None Include="Resources\kgnm3d.jpg" />
+    <None Include="Resources\kgno3nkgmlssd.jpg" />
+    <None Include="Resources\lm2d.jpg" />
+    <None Include="Resources\m.jpg" />
+    <None Include="Resources\m3.jpg" />
+    <None Include="Resources\m3d.jpg" />
+    <None Include="Resources\m3min.jpg" />
+    <Content Include="1.ico" />
+    <None Include="Resources\p.bmp" />
+    <None Include="Resources\p.jpg" />
+    <None Include="Resources\p1.jpg" />
+    <None Include="Resources\p2.png" />
+    <None Include="Resources\p3.png" />
+    <Content Include="FLOW\F-AO-HB01.jpg" />
+    <Content Include="FLOW\F-AO-OG01.jpg" />
+    <Content Include="FLOW\F-AO-OG02.jpg" />
+    <Content Include="FLOW\F-AO-OG03.jpg" />
+    <Content Include="FLOW\F-AO-OG04.jpg" />
+    <Content Include="FLOW\F-AO-OG05.jpg" />
+    <Content Include="FLOW\F-AO-OG06.jpg" />
+    <Content Include="FLOW\F-AO-UG01.jpg" />
+    <Content Include="FLOW\F-AO-UG02.jpg" />
+    <Content Include="FLOW\F-AO-UG03.jpg" />
+    <Content Include="FLOW\F-AO-UG04.jpg" />
+    <Content Include="FLOW\F-AO-UG05 .jpg" />
+    <Content Include="FLOW\F-AO-UG06.jpg" />
+    <Content Include="FLOW\F-O-HB01 .jpg" />
+    <Content Include="FLOW\F-O-OG01.jpg" />
+    <Content Include="FLOW\F-O-OG02.jpg" />
+    <Content Include="FLOW\F-O-OG03.jpg" />
+    <Content Include="FLOW\F-O-OG04.jpg" />
+    <Content Include="FLOW\F-O-OG05.jpg" />
+    <Content Include="FLOW\F-O-OG06.jpg" />
+    <Content Include="FLOW\F-O-UG01.jpg" />
+    <Content Include="FLOW\F-O-UG02.jpg" />
+    <Content Include="FLOW\F-O-UG03.jpg" />
+    <Content Include="FLOW\F-O-UG04.jpg" />
+    <Content Include="FLOW\F-O-UG05.jpg" />
+    <Content Include="FLOW\F-O-UG06 .jpg" />
+    <None Include="Resources\BFH.png" />
+    <None Include="Resources\BOD5.png" />
+    <None Include="Resources\CODe.png" />
+    <None Include="Resources\CODo.png" />
+    <None Include="Resources\d-1.png" />
+    <None Include="Resources\Eac.png" />
+    <None Include="Resources\Eaw.png" />
+    <None Include="Resources\Gs.png" />
+    <None Include="Resources\Gsc.png" />
+    <None Include="Resources\Gst.png" />
+    <None Include="Resources\Gsw.png" />
+    <None Include="Resources\h.png" />
+    <None Include="Resources\HD.png" />
+    <None Include="Resources\Kd%2820%29.png" />
+    <None Include="Resources\Kde%2820%29.png" />
+    <None Include="Resources\kgBOD5kgMLSSd.png" />
+    <None Include="Resources\kgBOD5m3d.png" />
+    <None Include="Resources\kgCODm3d.png" />
+    <None Include="Resources\kgd.png" />
+    <None Include="Resources\kgNH3-Nm3d.png" />
+    <None Include="Resources\kgNO3-NkgMLSSd.png" />
+    <None Include="Resources\Lm2d.png" />
+    <None Include="Resources\LSBOD5.png" />
+    <None Include="Resources\LSCOD.png" />
+    <None Include="Resources\LSNH3-N.png" />
+    <None Include="Resources\LVBOD5.png" />
+    <None Include="Resources\LVCOD.png" />
+    <None Include="Resources\LVNH3-N.png" />
+    <None Include="Resources\m.png" />
+    <None Include="Resources\m2.png" />
+    <None Include="Resources\m3.png" />
+    <None Include="Resources\m3d.png" />
+    <None Include="Resources\m3m2d.png" />
+    <None Include="Resources\m3min.png" />
+    <None Include="Resources\MLSSA.png" />
+    <None Include="Resources\MLSSO.png" />
+    <None Include="Resources\Nke.png" />
+    <None Include="Resources\Nko.png" />
+    <None Include="Resources\Nte.png" />
+    <None Include="Resources\Nto.png" />
+    <None Include="Resources\O2.png" />
+    <None Include="Resources\SSe.png" />
+    <None Include="Resources\SSo.png" />
+    <None Include="Resources\T.png" />
+    <None Include="Resources\TPe.png" />
+    <None Include="Resources\TPo.png" />
+    <None Include="Resources\WD.png" />
+    <None Include="Resources\X.png" />
+    <None Include="Resources\XV.png" />
+    <None Include="Resources\X化.png" />
+    <None Include="Resources\θC.png" />
+    <None Include="Resources\θCO.png" />
+    <None Include="Resources\片.png" />
+    <None Include="Resources\负荷参数.png" />
+    <None Include="Resources\负荷参数1.png" />
+    <None Include="Resources\污泥参数.png" />
+    <None Include="Resources\曝气参数.png" />
+    <None Include="Resources\设计参数.png" />
+    <None Include="Resources\有缺氧池工艺流程介绍.png" />
+    <None Include="Resources\无缺氧池工艺流程介绍.png" />
+    <Content Include="SIZE\S-AO-HB01.jpg" />
+    <Content Include="SIZE\S-AO-OG01.jpg" />
+    <Content Include="SIZE\S-AO-OG02.jpg" />
+    <Content Include="SIZE\S-AO-OG03.jpg" />
+    <Content Include="SIZE\S-AO-OG04.jpg" />
+    <Content Include="SIZE\S-AO-OG05.jpg" />
+    <Content Include="SIZE\S-AO-OG06.jpg" />
+    <Content Include="SIZE\S-AO-UG01.jpg" />
+    <Content Include="SIZE\S-AO-UG02.jpg" />
+    <Content Include="SIZE\S-AO-UG03.jpg" />
+    <Content Include="SIZE\S-AO-UG04.jpg" />
+    <Content Include="SIZE\S-O-HB01 .jpg" />
+    <Content Include="SIZE\S-O-OG01.jpg" />
+    <Content Include="SIZE\S-O-OG02.jpg" />
+    <Content Include="SIZE\S-O-OG03.jpg" />
+    <Content Include="SIZE\S-O-OG04.jpg" />
+    <Content Include="SIZE\S-O-OG05.jpg" />
+    <Content Include="SIZE\S-O-OG06.jpg" />
+    <Content Include="SIZE\S-O-UG01.jpg" />
+    <Content Include="SIZE\S-O-UG02.jpg" />
+    <Content Include="SIZE\S-O-UG03.jpg" />
+    <Content Include="SIZE\S-O-UG04.jpg" />
+    <Content Include="tb-img2ico.net.ico" />
+    <Content Include="ZIZHENG.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Enabled="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
